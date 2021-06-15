@@ -1,48 +1,48 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { MapView } from 'expo';
-// import { BrowserRouter } from 'react-router-dom';
-// require('jquery');
-// import MapView from 'react-native-maps';
+import {MapView} from 'react-native-maps';
 
-export default class App extends React.Component {
+export default class App extends React.Component{
 
-  constructor(props){
-    super(props);
-
-    this.state = {
-      region: {
-        latitude: 37.78825,
-      longitude: -122.4324,
-      latitudeDelta: 0.0922,
-      longitudeDelta: 0.0421,
-      }
-    }
+state = {
+  region:{
+    latitude: 37.78825,
+    longitude: -122.4324,
+    latitudeDelta: 0.922,
+    longitudeDelta: 0.0421,
   }
+}
 
 
-render(){
+
+
+
+
+  render(){
   return (
     <View style={styles.container}>
       <Text>hiii</Text>
-      <MapView
+      <MapView 
       initialRegion={this.state.region}
       showsCompass={true}
-      rotateEnabled={false}
-      style={{flex: 1}}
-      />
+      rotateEnabled={true}
+      style={{flex: 1}}/>
+      
+
+      
+      
+      
+      <StatusBar style="auto" />
     </View>
   );
 }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
-
-
