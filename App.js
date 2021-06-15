@@ -3,18 +3,19 @@ import { StyleSheet, Text, View } from 'react-native';
 import { MapView } from 'expo';
 // import { BrowserRouter } from 'react-router-dom';
 // require('jquery');
+// import MapView from 'react-native-maps';
 
 export default class App extends React.Component {
 
   constructor(props){
     super(props);
-    
+
     this.state = {
       region: {
         latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.922,
-        longitudedelta: 0.421
+      longitude: -122.4324,
+      latitudeDelta: 0.0922,
+      longitudeDelta: 0.0421,
       }
     }
   }
